@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Verdad - Blog de Elena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>La Verdad</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#ubicaciones">Ubicaciones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido en 2 columnas -->
+  <main>
+    <!-- Columna izquierda -->
+    <section class="contenido">
+      <article id="inicio">
+        <h2>Lo que no te cuentan</h2>
+        <p>Nos dicen que los Guardianes están aquí para protegernos. Que sin ellos la vida dentro del domo no sería
+          posible. Pero lo que no cuentan es lo que hacen cuando nadie los ve. <br>
+
+          Yo los vi, no una vez, sino varias. Acechan en los márgenes, se esconden en los túneles, aparecen en lugares
+          donde no deberían estar. ¿Quién los controla en esos momentos? Nadie. Y eso es lo que más me asusta.<br>
+
+          No son ángeles azules, son bestias entrenadas para mantenernos obedientes. Afuera todo es árido, seco, muerto…
+          ¿y adentro? Un ecosistema que florece gracias a máquinas disfrazadas de animales. ¿Eso llaman vida natural? Yo
+          lo llamo manipulación.<br>
+
+          Dicen que restauran lo que perdimos, pero yo me pregunto: ¿a cambio de qué? ¿Cuánto de nuestra libertad
+          entregamos para seguir respirando bajo este domo?<br>
+
+          Por eso escribo acá. Porque alguien tiene que hablar, aunque no quieran escucharlo. Alguien tiene que mostrar
+          lo que está pasando. No me interesa convencerte, solo abrirte los ojos: la verdad está ahí afuera, pero está
+          cubierta de azul.</p>
+      </article>
+
+      <article>
+
+        <h2>Avistamientos</h2>
+        <div class="infofoto">
+          <img src="fotos/guardian1.png" alt="Foto de supuesto guardián">
+          <p>Dicen que mantienen limpio el ecosistema, que regulan cada detalle. Pero ¿qué hace este guardián
+            revolviendo bolsas de basura? La escena habla sola: desparramó los desechos por todo el suelo. Si de verdad
+            están aquí para protegernos, ¿por qué destruyen el mismo ambiente que dicen cuidar? Para mí no es descuido:
+            es prueba de que no les importa el equilibrio, solo cumplir con sus propios fines.</p>
+        </div>
+        <div class="infofoto2">
+          <img src="fotos/guardian2.png" alt="Guardían en el río seco">
+          <p>Algunos dirán: ‘No pasa nada, solo está patrullando’. Pero yo pregunto: ¿por qué en esta zona? No había
+            nada que proteger, ningún riesgo, ningún animal alrededor. Se mueven donde quieren, sin supervisión, sin dar
+            explicaciones. Tal vez no patrullan: vigilan. ¿A quién? A nosotros.</p>
+        </div>
+        </div>
+        <div class="infofoto">
+          <img src="fotos/guardian3.png" alt="Guardían en el río seco">
+          <p>Esta es una de las imágenes más inquietantes. El guardián arrinconando a un ciervo indefenso. Nos repiten
+            que regulan la fauna, que son parte del equilibrio natural. ¿Esto es equilibrio? ¿Intimidar, acorralar,
+            asustar? Algunos dirán que es solo un malentendido, que el ciervo se cruzó en su camino. Yo digo que es un
+            recordatorio: nunca dejan de mostrarnos quién tiene el poder.</p>
+        </div>
+      </article>
+
+      <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="carrusel">
+          <div class="slide">“Vi a un guardián descansando en <br> medio del turno.” – Testigo 1</div>
+          <div class="slide">“No siempre actúan como protectores, <br> algunos se comportan con violencia.” – Testigo 2
+          </div>
+          <div class="slide">“Los encontré reunidos en secreto <br> cerca del río seco.” – Testigo 3</div>
+        </div>
+      </section>
+
+      <section id="ubicaciones">
+        <h2>Posibles ubicaciones</h2>
+        <ul>
+          <li>Viejo invernadero abandonado</li>
+          <li>Cueva cercana a la Puerta 3</li>
+          <li>Túneles debajo del domo</li>
+        </ul>
+        <iframe src="https://www.google.com/maps/d/u/6/embed?mid=1_NJXWtNa2LmE5hq1nbTNHkK_4zAhydQ&ehbc=2E312F" width="640" height="480"></iframe>
+      </section>
+    </section>
+
+    <!-- Sidebar derecha -->
+    <aside class="sidebar">
+      <img src="fotos/elena.png" alt="Foto de Elena" class="perfil">
+      <h3>Sobre Elena</h3>
+      <p>“No me callo, digo lo que otros temen sobre los Guardianes.”</p>
+      <div class="redes">
+        <a href="#">X</a>
+        <a href="#">Correo</a>
+      </div>
+    </aside>
+
+    <div id="login">
+  <!-- <h2>Acceso</h2>-->
+  <input type="password" id="pass" placeholder="Contraseña">
+  <button onclick="checkPass()">Entrar</button>
+  <p id="msg"></p>
+</div>
+
+<script>
+  function checkPass() {
+    var clave = "1234"; // 👈 tu contraseña
+    var ingreso = document.getElementById("pass").value;
+    if (ingreso === clave) {
+      document.getElementById("login").style.display = "none";
+      document.body.style.overflow = "auto";
+    } else {
+      document.getElementById("msg").innerText = "Contraseña incorrecta";
+    }
+  }
+</script>
+
+<style>
+  #login {
+    position: fixed;
+    inset: 0;
+    background: #000000;
+    display: grid;
+    place-items: center;
+    color: white;
+    z-index: 9999;
+  }
+  #login input, #login button {
+    padding: 10px;
+    margin: 5px;
+  }
+</style>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2100 Blog de Elena | La Verdad</p>
+  </footer>
+</body>
+
+</html>
